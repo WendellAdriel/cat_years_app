@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var catAge: UITextField!
+    @IBOutlet weak var result: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func calcAge(_ sender: Any) {
+        let resultAge = Int(catAge.text!)! * 7
+        result.text = String(resultAge)
+    }
 }
-
